@@ -172,13 +172,13 @@ def checkComputerMove(row, column, computer):
 def createLog(playerRow, playerColumn, turn, computerRow, computerColumn, player, computer, win):
     # Write new log file
     if turn == 1:
-        log = open("logfile_21050406.txt", "w")
+        log = open("logfile.txt", "w")
         log.write(str(turn) + ", H, " + str(playerRow) + ", " + str(playerColumn) + ", " + player + "\n")
         log.write(str(turn) + ", C, " + str(computerRow) + ", " + str(computerColumn) + ", " + computer + "\n")
 
     # Append available file
     else:
-        log = open("logfile_21050406.txt", "a")
+        log = open("logfile.txt", "a")
         log.write(str(turn) + ", H, " + str(playerRow) + ", " + str(playerColumn) + ", " + player + "\n")
 
         # Ensure no repeat append of extra computer move
